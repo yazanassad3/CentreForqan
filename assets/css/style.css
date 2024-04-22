@@ -49,6 +49,12 @@ body{
 	overflow-x:hidden;
 }
 
+
+.Cairo {
+  font-family: "Cairo", sans-serif;
+  font-optical-sizing: auto;
+}
+
 a,a:hover,a:active,a:focus {
 	display:inline-block;
 	text-decoration:none;

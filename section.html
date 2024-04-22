@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Section</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+  
+    <style>
+
+        body {
+            margin: 0PX;
+            
+        }
+        .body{
+            margin: 0px;
+            width: 100%;
+            height:700px;
+            display: grid;
+            
+            grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+            grid-template-rows: 12% 8% 10% 10% 10% 10% 10% 10% 10% 10%;
+        
+        }
+        .taskBar {
+            display: flex;
+            grid-area: 1/1/2/11;         
+            margin: 0px;
+            border: solid 4px rgba(20, 108, 130, 1);
+        }
+        .logoPage {
+            width: 60px;
+            margin: 5px;
+        }
+        .conteniar{
+            grid-area: 2/8/11/11;         
+            border: solid 4px rgba(20, 108, 130, 1);
+            
+        }
+        
+
+        
+       
+        
+        
+   
+      
+     
+        .header_button_logout , .header_button_back  {
+            height: 70%;
+            width: 20%;
+            margin:auto;
+            font-size:34px;
+            color:white;
+            background-color: rgba(20, 108, 130, 1);
+            display: flex;
+            justify-content: center; /* Centering Horizantly */
+            align-items: center;
+            border-radius: 5px;
+            box-shadow: 0 6px 0 var(--primary-dark), 0 5px 15px -4px #000;
+        }
+        .header_button_logout:hover ,  .header_button_back:hover {
+            transform: rotate(360deg);
+            transform: scale(1.02);
+            filter: brightness(90%);
+            cursor: pointer;
+
+        }
+        
+        .headTitle {
+            margin:auto;
+            font-size:34px;
+            color:green;
+        }
+       
+        
+        
+        @media only screen and (max-width: 750px){
+            
+            .headTitle , .header_button_logout , .header_button_back {
+                font-size:24px;
+            }
+            .conteniar {
+                grid-area:2/1/10/11;
+
+            }
+            
+    
+        }
+        @media only screen and (max-width: 500px){
+            
+             .headTitle , .header_button_logout, .header_button_back  {
+                font-size:16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div class="taskBar">
+            <img class="logoPage" src="assets/logo/logoForqan.png">
+            <div class="headTitle">مركز الفرقان القراني</div>
+            <div class="header_button_back">عودة</div>
+            <div class="header_button_logout">خروج</div>
+        </div> 
+    </div>
+    
+</body>
+</html>

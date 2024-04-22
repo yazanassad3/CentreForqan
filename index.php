@@ -1,3 +1,7 @@
+<?php
+include "news.php";
+
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 
@@ -10,7 +14,9 @@
 
         <!--font-family-->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
         <!-- title of site -->
         <title>Directory Landing Page</title>
 
@@ -84,7 +90,6 @@
 			            <!-- Collect the nav links, forms, and other content for toggling -->
 			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
 			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-								<li  class="scroll"><a href="" >تسجيل الدخول</a></li>
 								<li class="scroll"><a href="#footer">التواصل</a></li>
 			                    <li class="scroll"><a href="#activity">الأنشطة</a></li>
 								<li class="scroll"><a href="#works">حول المركز</a></li>
@@ -105,14 +110,14 @@
 		<section id="home" class="welcome-hero">
 			<div class="container">
 				<div class="welcome-hero-txt">
-					<h2>
+					<h2 class="Cairo">
 						مركز الفرقان القراني
 					</h2>
 				</div>
 				<div class="welcome-hero-serch-box">
 					<div class="welcome-hero-search">
 
-						<button class="welcome-hero-btn" onclick="window.location.href='#'">
+						<button class="welcome-hero-btn" onclick="window.location.href='sign_in.php'">
 							<span>&#xF308;</span> تسجيل الدخول  
 						</button>
 					</div>
@@ -134,21 +139,9 @@
 			</div><!--/.section-header-->
 			<div class="reviews-content">
 				<div class="testimonial-carousel">
-				    <div class="single-testimonial-box">
-						<div class="testimonial-description">
-							<div class="testimonial-title">Title</div>
-							<div class="testimonial-info">
-								<div class="testimonial-person">
-									<img src="assets/images/explore/e1.jpg" alt="">
-								</div><!--/.testimonial-person-->
-							</div><!--/.testimonial-info-->
-							<div class="testimonial-comment">
-								<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ratione architecto excepturi enim ab vel. Amet nostrum voluptatibus sapiente incidunt. Odio rerum voluptatum odit laborum eum placeat eaque autem error.
-								</p>	
-							</div><!--/.testimonial-comment-->
-						</div><!--/.testimonial-description-->
-					</div><!--/.single-testimonial-box-->
+				    <?php 
+						viewNews();
+					?>
 					<div class="single-testimonial-box">
 						<div class="testimonial-description">
 							<div class="testimonial-title">Title</div>
@@ -446,7 +439,7 @@
 			           	</div>
 			           	<div class="col-sm-9">
 			           		<ul class="footer-menu-item">
-			                    <li class="scroll"><a href="">تسجيل الدخول</a></li>
+			                    <!--<li class="scroll"><a href="">تسجيل الدخول</a></li>-->
 								<li class="scroll"><a href="#works">حول المركز</a></li>
 			                    <li class="scroll"><a href="#reviews ">اخر الاخبار</a></li>
 		                        <li class=" scroll active"><a href="#home">الصفحة الرئيسية</a></li>
