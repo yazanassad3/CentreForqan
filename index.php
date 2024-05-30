@@ -1,24 +1,27 @@
 <?php
-include "news.php";
-
+	include "news.php";
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
 
     <head>
+		<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+		
         <!-- meta data -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Rakkas&display=swap" rel="stylesheet">
         <!--font-family-->
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
         <!-- title of site -->
-        <title>Directory Landing Page</title>
+        <title>مركز الفرقان القراني</title>
 
         <!-- For forqan png -->
 		<link rel="shortcut icon" type="image/icon" href="assets/logo/forqan.jpg"/>
@@ -53,12 +56,58 @@ include "news.php";
         
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		
+			<style>
+			.dateAct {
+				display:flex;
+				justify-content: flex-start;
+				flex-direction:column;
+				margin-right:auto;
+				align-items:flex-end;
+				color:rgba(20, 108, 130, 1);
+			}
+			.single-testimonial-box {
+            	border-radius: 25px;
+        	}
+			::-webkit-scrollbar {
+			width: 10px;
+			}
+			
+			.rakkas-regular {
+				font-family: "Rakkas", serif;
+				font-weight: 400;
+				font-style: normal;
+			}
+
+
+
+				/* Track */
+			::-webkit-scrollbar-track {
+				border-radius: 6px;
+				background: #f1f1f1;
+			}
+
+				/* Handle */
+			::-webkit-scrollbar-thumb {
+				border-radius: 10px;
+				background: rgba(20, 108, 130, 1);
+			
+			}
+			::-webkit-scrollbar-track-piece  {
+			
+				/* 4 */ }
+				/* Handle on hover */
+			::-webkit-scrollbar-thumb:hover {
+				background: #555;
+			}
+			.navvv{
+				color: #1A5F6F;
+				font-size:50px;
+			}
+		</style> 	
         <!--[if lt IE 9]>
 			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
-
     </head>
 	
 	<body>
@@ -70,8 +119,8 @@ include "news.php";
 		<!--header-top end -->
 
 		<!-- top-area Start -->
-		<section class="top-area">
-			<div class="header-area">
+		<section class="top-area rakkas-regular" >
+			<div class="header-area" >
 				<!-- Start Navigation -->
 			    <nav class="navbar navbar-default bootsnav  navbar-sticky navbar-scrollspy"  data-minus-value-desktop="70" data-minus-value-mobile="55" data-speed="1000">
 
@@ -82,7 +131,7 @@ include "news.php";
 			                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
 			                    <i class="fa fa-bars"></i>
 			                </button>
-			                <a class="navbar-brand" href="index.html"><img src="assets/logo/logoForqan.png" style="width: 80px;"></a>
+			                <a class="navbar-brand" href="index.php"><img src="assets/logo/logoForqan.png" style="width: 80px;"></a>
 
 			            </div><!--/.navbar-header-->
 			            <!-- End Header Navigation -->
@@ -110,20 +159,18 @@ include "news.php";
 		<section id="home" class="welcome-hero">
 			<div class="container">
 				<div class="welcome-hero-txt">
-					<h2 class="Cairo">
-						مركز الفرقان القراني
-					</h2>
+					<div class="rakkas-regular" style="font-size:70px; font: weight 900px; color:white;">
+						مركز الفرقان القرآني
+					</div>
 				</div>
 				<div class="welcome-hero-serch-box">
 					<div class="welcome-hero-search">
-
-						<button class="welcome-hero-btn" onclick="window.location.href='sign_in.php'">
-							<span>&#xF308;</span> تسجيل الدخول  
+						<button class="welcome-hero-btn rakkas-regular" onclick="window.location.href='sign_in.php'">
+						 تسجيل الدخول  
 						</button>
 					</div>
 				</div>
 			</div>
-
 		</section><!--/.welcome-hero-->
 		<!--welcome-hero end -->
 
@@ -135,99 +182,22 @@ include "news.php";
 		<!--reviews start -->
 		<section id="reviews" class="reviews">
 			<div class="section-header">
-				<h2>اخر الاخبار</h2>
+				<div class="navvv rakkas-regular">آخر الأخبار</div>
 			</div><!--/.section-header-->
 			<div class="reviews-content">
 				<div class="testimonial-carousel">
 				    <?php 
 						viewNews();
 					?>
-					<div class="single-testimonial-box">
-						<div class="testimonial-description">
-							<div class="testimonial-title">Title</div>
-							<div class="testimonial-info">
-								<div class="testimonial-person">
-									<img src="assets/images/explore/e1.jpg" alt="">
-								</div><!--/.testimonial-person-->
-							</div><!--/.testimonial-info-->
-							<div class="testimonial-comment">
-								<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ratione architecto excepturi enim ab vel. Amet nostrum voluptatibus sapiente incidunt. Odio rerum voluptatum odit laborum eum placeat eaque autem error.
-								</p>	
-							</div><!--/.testimonial-comment-->
-						</div><!--/.testimonial-description-->
-					</div><!--/.single-testimonial-box-->
-					<div class="single-testimonial-box">
-						<div class="testimonial-description">
-							<div class="testimonial-title">Title</div>
-							<div class="testimonial-info">
-								<div class="testimonial-person">
-									<img src="assets/images/explore/e1.jpg" alt="">
-								</div><!--/.testimonial-person-->
-							</div><!--/.testimonial-info-->
-							<div class="testimonial-comment">
-								<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ratione architecto excepturi enim ab vel. Amet nostrum voluptatibus sapiente incidunt. Odio rerum voluptatum odit laborum eum placeat eaque autem error.
-								</p>	
-							</div><!--/.testimonial-comment-->
-						</div><!--/.testimonial-description-->
-					</div><!--/.single-testimonial-box-->
-					<div class="single-testimonial-box">
-						<div class="testimonial-description">
-							<div class="testimonial-title">Title</div>
-							<div class="testimonial-info">
-								<div class="testimonial-person">
-									<img src="assets/images/explore/e1.jpg" alt="">
-								</div><!--/.testimonial-person-->
-							</div><!--/.testimonial-info-->
-							<div class="testimonial-comment">
-								<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ratione architecto excepturi enim ab vel. Amet nostrum voluptatibus sapiente incidunt. Odio rerum voluptatum odit laborum eum placeat eaque autem error.
-								</p>	
-							</div><!--/.testimonial-comment-->
-						</div><!--/.testimonial-description-->
-					</div><!--/.single-testimonial-box-->
-					<div class="single-testimonial-box">
-						<div class="testimonial-description">
-							<div class="testimonial-title">Title</div>
-							<div class="testimonial-info">
-								<div class="testimonial-person">
-									<img src="assets/images/explore/e1.jpg" alt="">
-								</div><!--/.testimonial-person-->
-							</div><!--/.testimonial-info-->
-							<div class="testimonial-comment">
-								<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ratione architecto excepturi enim ab vel. Amet nostrum voluptatibus sapiente incidunt. Odio rerum voluptatum odit laborum eum placeat eaque autem error.
-								</p>	
-							</div><!--/.testimonial-comment-->
-						</div><!--/.testimonial-description-->
-					</div><!--/.single-testimonial-box-->
-					<div class="single-testimonial-box">
-						<div class="testimonial-description">
-							<div class="testimonial-title">Title</div>
-							<div class="testimonial-info">
-								<div class="testimonial-person">
-									<img src="assets/images/explore/e1.jpg" alt="">
-								</div><!--/.testimonial-person-->
-							</div><!--/.testimonial-info-->
-							<div class="testimonial-comment">
-								<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ratione architecto excepturi enim ab vel. Amet nostrum voluptatibus sapiente incidunt. Odio rerum voluptatum odit laborum eum placeat eaque autem error.
-								</p>	
-							</div><!--/.testimonial-comment-->
-						</div><!--/.testimonial-description-->
-					</div><!--/.single-testimonial-box-->
-					
 				</div>
 			</div>
-
 		</section><!--/.reviews-->
 		<!--reviews end -->
 		<!--works start -->
 		<section id="works" class="works">
 			<div class="container">
 				<div class="section-header">
-					<h2>حول المركز</h2>
+				<div class="navvv rakkas-regular">حول المركز</div>
 					
 				</div><!--/.section-header-->
 				<div class="works-content">
@@ -237,13 +207,10 @@ include "news.php";
 								<div class="single-how-works-icon">
 									<i class="flaticon-lightbulb-idea"></i>
 								</div>
-								<h2><a href="#">choose <span> what to</span> do</a></h2>
+								<h2><a href="#">رؤيتنا</a></h2>
 								<p>
-									Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
-								</p>
-								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
-									read more
-								</button>
+								يهدف مركزنا إلى نشر وتعليم القرآن الكريم وفقاً لأحدث الطرق والأساليب التعليمية الحديثة. نسعى لبناء جيل متقن لتلاوة وحفظ كتاب الله، ومتمسك بقيمه وتعاليمه، قادر على أن يكون قدوة في المجتمع.								</p>
+								
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-6">
@@ -251,13 +218,9 @@ include "news.php";
 								<div class="single-how-works-icon">
 									<i class="flaticon-networking"></i>
 								</div>
-								<h2><a href="#">find <span> what you want</span></a></h2>
+								<h2><a href="#">رسالتنا</a></h2>
 								<p>
-									Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
-								</p>
-								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
-									read more
-								</button>
+								نحن ملتزمون بتقديم تعليم متميز للقرآن الكريم وتجويده، من خلال برامج تعليمية متنوعة تناسب جميع الأعمار والمستويات. نسعى لبناء بيئة تعليمية تشجع على التعلم والتحفيز الذاتي، مع التركيز على الفهم العميق لمعاني القرآن الكريم.								</p>
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-6">
@@ -265,13 +228,14 @@ include "news.php";
 								<div class="single-how-works-icon">
 									<i class="flaticon-location-on-road"></i>
 								</div>
-								<h2><a href="#">explore <span> amazing</span> place</a></h2>
+								<h2><a href="#">خدماتنا</a></h2>
 								<p>
-									Lorem ipsum dolor sit amet, consecte adipisicing elit, sed do eiusmod tempor incididunt ut laboremagna aliqua. 
-								</p>
-								<button class="welcome-hero-btn how-work-btn" onclick="window.location.href='#'">
-									read more
-								</button>
+								يوفر مركزنا العديد من الخدمات التعليمية بما في ذلك:
+دورات تعليمية لحفظ القرآن الكريم
+دروس تجويد لكافة المستويات
+دورات تحفيظ للأطفال والكبار
+برامج قرآنية في رمضان والأعياد
+جلسات تدبر وتفسير القرآن الكريم								</p>
 							</div>
 						</div>
 					</div>
@@ -283,108 +247,20 @@ include "news.php";
 		<!--reviews start -->
 		<section id="activity" class="reviews">
 			<div class="section-header">
-				<h2>الأنشطة</h2>
+				<div class="navvv rakkas-regular">الأنشطة</div>
 			</div><!--/.section-header-->
 			<div class="reviews-content">
 				<div class="testimonial-carousel">
-				    <div class="single-testimonial-box">
-						<div class="testimonial-description">
-							<div class="testimonial-title">Title</div>
-							<div class="testimonial-info">
-								<div class="testimonial-person">
-									<img src="assets/images/explore/e1.jpg" alt="">
-								</div><!--/.testimonial-person-->
-							</div><!--/.testimonial-info-->
-							<div class="testimonial-comment">
-								<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ratione architecto excepturi enim ab vel. Amet nostrum voluptatibus sapiente incidunt. Odio rerum voluptatum odit laborum eum placeat eaque autem error.
-								</p>	
-							</div><!--/.testimonial-comment-->
-						</div><!--/.testimonial-description-->
-					</div><!--/.single-testimonial-box-->
-					<div class="single-testimonial-box">
-						<div class="testimonial-description">
-							<div class="testimonial-title">Title</div>
-							<div class="testimonial-info">
-								<div class="testimonial-person">
-									<img src="assets/images/explore/e1.jpg" alt="">
-								</div><!--/.testimonial-person-->
-							</div><!--/.testimonial-info-->
-							<div class="testimonial-comment">
-								<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ratione architecto excepturi enim ab vel. Amet nostrum voluptatibus sapiente incidunt. Odio rerum voluptatum odit laborum eum placeat eaque autem error.
-								</p>	
-							</div><!--/.testimonial-comment-->
-						</div><!--/.testimonial-description-->
-					</div><!--/.single-testimonial-box-->
-					<div class="single-testimonial-box">
-						<div class="testimonial-description">
-							<div class="testimonial-title">Title</div>
-							<div class="testimonial-info">
-								<div class="testimonial-person">
-									<img src="assets/images/explore/e1.jpg" alt="">
-								</div><!--/.testimonial-person-->
-							</div><!--/.testimonial-info-->
-							<div class="testimonial-comment">
-								<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ratione architecto excepturi enim ab vel. Amet nostrum voluptatibus sapiente incidunt. Odio rerum voluptatum odit laborum eum placeat eaque autem error.
-								</p>	
-							</div><!--/.testimonial-comment-->
-						</div><!--/.testimonial-description-->
-					</div><!--/.single-testimonial-box-->
-					<div class="single-testimonial-box">
-						<div class="testimonial-description">
-							<div class="testimonial-title">Title</div>
-							<div class="testimonial-info">
-								<div class="testimonial-person">
-									<img src="assets/images/explore/e1.jpg" alt="">
-								</div><!--/.testimonial-person-->
-							</div><!--/.testimonial-info-->
-							<div class="testimonial-comment">
-								<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ratione architecto excepturi enim ab vel. Amet nostrum voluptatibus sapiente incidunt. Odio rerum voluptatum odit laborum eum placeat eaque autem error.
-								</p>	
-							</div><!--/.testimonial-comment-->
-						</div><!--/.testimonial-description-->
-					</div><!--/.single-testimonial-box-->
-					<div class="single-testimonial-box">
-						<div class="testimonial-description">
-							<div class="testimonial-title">Title</div>
-							<div class="testimonial-info">
-								<div class="testimonial-person">
-									<img src="assets/images/explore/e1.jpg" alt="">
-								</div><!--/.testimonial-person-->
-							</div><!--/.testimonial-info-->
-							<div class="testimonial-comment">
-								<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ratione architecto excepturi enim ab vel. Amet nostrum voluptatibus sapiente incidunt. Odio rerum voluptatum odit laborum eum placeat eaque autem error.
-								</p>	
-							</div><!--/.testimonial-comment-->
-						</div><!--/.testimonial-description-->
-					</div><!--/.single-testimonial-box-->
-					<div class="single-testimonial-box">
-						<div class="testimonial-description">
-							<div class="testimonial-title">Title</div>
-							<div class="testimonial-info">
-								<div class="testimonial-person">
-									<img src="assets/images/explore/e1.jpg" alt="">
-								</div><!--/.testimonial-person-->
-							</div><!--/.testimonial-info-->
-							<div class="testimonial-comment">
-								<p>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto ratione architecto excepturi enim ab vel. Amet nostrum voluptatibus sapiente incidunt. Odio rerum voluptatum odit laborum eum placeat eaque autem error.
-								</p>	
-							</div><!--/.testimonial-comment-->
-						</div><!--/.testimonial-description-->
-					</div><!--/.single-testimonial-box-->
-					
+					<?php 
+						viewActivity();
+					?>
 				</div>
 			</div>
 
 		</section><!--/.reviews-->
 		<!-- statistics strat -->
 		<section id="statistics"  class="statistics">
-			<div class="container">
+			<div class="container rakkas-regular">
 				<div class="statistics-counter"> 
 					<div class="col-md-3 col-sm-6">
 						<div class="single-ststistics-box">
@@ -405,7 +281,7 @@ include "news.php";
 					<div class="col-md-3 col-sm-6">
 						<div class="single-ststistics-box">
 							<div class="statistics-content">
-								<div class="counter">65</div>
+								<div class="counter">25</div>
 							</div><!--/.statistics-content-->
 							<h3>المعلمين</h3>
 						</div><!--/.single-ststistics-box-->
@@ -413,9 +289,9 @@ include "news.php";
 					<div class="col-md-3 col-sm-6">
 						<div class="single-ststistics-box">
 							<div class="statistics-content">
-								<div class="counter">20</div>
+								<div class="counter">10</div>
 							</div><!--/.statistics-content-->
-							<h3>الاداريين</h3>
+							<h3>الإداريين</h3>
 						</div><!--/.single-ststistics-box-->
 					</div><!--/.col-->
 				</div><!--/.statistics-counter-->	
@@ -438,7 +314,7 @@ include "news.php";
 				            </div><!--/.navbar-header-->
 			           	</div>
 			           	<div class="col-sm-9">
-			           		<ul class="footer-menu-item">
+			           		<ul class="footer-menu-item rakkas-regular">
 			                    <!--<li class="scroll"><a href="">تسجيل الدخول</a></li>-->
 								<li class="scroll"><a href="#works">حول المركز</a></li>
 			                    <li class="scroll"><a href="#reviews ">اخر الاخبار</a></li>
@@ -450,9 +326,8 @@ include "news.php";
 				<div class="hm-footer-copyright">
 					<div class="row">
 						<div class="col-sm-5">
-							<p>
-								&copy;copyright. designed and developed by <a href="https://www.themesine.com/">themesine</a>
-							</p><!--/p-->
+							
+		
 						</div>
 						<div class="col-sm-7">
 							<div class="footer-social">

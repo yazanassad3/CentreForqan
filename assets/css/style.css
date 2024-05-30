@@ -108,11 +108,10 @@ html,body{height: 100%;}
     text-align: center;
 }
 .section-header h2{
-    color: #505866;
-    font-size:24px;
+    color: #1A5F6F;
+    font-size:80px;
     font-weight: 500;
     margin-bottom: 24px;
-    text-transform: uppercase;
     letter-spacing: 1.3px;
 }
 .section-header h2 span{text-transform: lowercase;}
@@ -204,7 +203,8 @@ nav.navbar.bootsnav {
     padding: 0px 0px;
     text-transform:capitalize;
 }
-.navbar-header a.navbar-brand span{display: inline-block;text-transform:capitalize;}
+.navbar-header a.navbar-bra
+nd span{display: inline-block;text-transform:capitalize;}
 
 .wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand,.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand:hover,.wrap-sticky nav.navbar.bootsnav.sticked .navbar-header a.navbar-brand:focus {padding:0px 0px;}
 /*.navbar-brand*/
@@ -265,7 +265,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #1A5F6F;}
 --------------------------------------*/
 .welcome-hero {
     position: relative;
-    background:url(../images/welcome-hero/banner.jpg)no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(../images/welcome-hero/banner.jpg)no-repeat;
     background-position:center;
     background-size:cover;
     text-align: center;
@@ -279,14 +279,13 @@ nav.navbar.bootsnav .navbar-toggle i{color: #1A5F6F;}
     left: 0;
     width: 100%;
     height: 100%;
-    background:rgba(65,73,89,.65);
     z-index: -1;
 }
 .welcome-hero-txt { padding-top: 155px;}
 
 .welcome-hero-txt h2 {
     font-size: 48px;
-    color: #fff;
+    color: #F6CF66;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2.4px;
@@ -409,6 +408,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #1A5F6F;}
 .works-content {margin-top: 73px;}
 
 .single-how-works{
+    background-color:white;
     text-align: center;
     padding:50px 42px;
     border-radius: 3px;
@@ -438,7 +438,7 @@ nav.navbar.bootsnav .navbar-toggle i{color: #1A5F6F;}
 .single-how-works p {margin-bottom: 25px;text-transform: initial;}
 
 .single-how-works-icon [class^="flaticon-"]:before,.single-how-works-icon [class*=" flaticon-"]:before,.single-how-works-icon [class^="flaticon-"]:after,.single-how-works-icon [class*=" flaticon-"]:after {font-size: 35px;}
-.single-how-works:hover .single-how-works-icon [class^="flaticon-"]:before,.single-how-works:hover .single-how-works-icon [class*=" flaticon-"]:before,.single-how-works:hover .single-how-works-icon [class^="flaticon-"]:after,.single-how-works:hover .single-how-works-icon [class*=" flaticon-"]:after {color:#ff545a;}
+.single-how-works:hover .single-how-works-icon [class^="flaticon-"]:before,.single-how-works:hover .single-how-works-icon [class*=" flaticon-"]:before,.single-how-works:hover .single-how-works-icon [class^="flaticon-"]:after,.single-how-works:hover .single-how-works-icon [class*=" flaticon-"]:after {color:rgba(216, 172, 85, 1);;}
 
 .welcome-hero-btn.how-work-btn {
     display: inline-block;
@@ -673,12 +673,31 @@ nav.navbar.bootsnav .navbar-toggle i{color: #1A5F6F;}
     margin-top: 18px;
 }
 .testimonial-comment p{
+    text-align: end;
     color: #8d939e;
     font-size: 14px;
     font-weight: 300;
 }/* testimonial-comment */
 
-
+/* testimonial-button */
+.testimonial-button {
+    margin-top: 18px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.testimonial-button button{
+    color:white;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 4px;
+}/* testimonial-button */
+.testimonial-button .delete{
+    background-color: rgba(216, 172, 85, 1);;
+}/* testimonial-button */
+.testimonial-button .update{
+    background-color: #fd980b;
+}/* testimonial-button */
 /*.slick-slide*/
 .slick-initialized .slick-slide {
     display: block;

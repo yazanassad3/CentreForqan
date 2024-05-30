@@ -33,14 +33,14 @@
 
     }else{
 
-        $query = "SELECT * FROM `user` WHERE name = '$name' AND password = '$pass' ";
+        $query = "SELECT * FROM `user` WHERE email = '$name' AND password = '$pass' ";
         $result = mysqli_query($conn, $query) or die("Query failed:" . mysqli_error($conn));
 
         if (mysqli_num_rows($result) === 1) {
 
             $row = mysqli_fetch_assoc($result);
 
-            if ($row['name'] === $name && $row['password'] === $pass) {
+            if ($row['email'] === $name && $row['password'] === $pass) {
 
                 echo "Logged in!";
 
@@ -48,10 +48,18 @@
 
                 $_SESSION['id'] = $row['user_id'];
 
-                $_SESSION['Type'] = $row['Type'];
+                $type=$_SESSION['Type'] = $row['Type'];
+                $type=strtolower($type);
                 $_SESSION['phone'] = $row['numPhone'];
-            
-                header("Location: studentPlan.php");
+                if($type=='admin')
+                header("Location: admin/admin1.php");
+                else if($type=='teacher')
+                header("Location: teacher.php");
+                else if($type=='student')
+                header("Location: student/student.php");
+                else
+                header("Location: publisher/publisher.php");
+
 
                 exit();
 

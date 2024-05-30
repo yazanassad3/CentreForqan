@@ -9,13 +9,16 @@
     <style>
             .gradient-custom {
             /* fallback for old browsers */
-            background: #1A5F6F;
+            background: #D1D9E1;
 
             /* Chrome 10-25, Safari 5.1-6 */
-            background: -webkit-linear-gradient(to right, #1A5F6F,#217b8f);
+            background: -webkit-linear-gradient(to right, #D1D9E1,#1A5F6F);
 
             /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-            background: linear-gradient(to right,  #1A5F6F,#217b8f)
+            background: linear-gradient(to bottom,  #D1D9E1,#217b8f)
+            }
+            a img:hover {
+              carsor:pointer;
             }
     </style>
 </head>
@@ -28,8 +31,9 @@
           <div class="card-body p-5 text-center">
 
             <div class="mb-md-1 mt-md-1 pb-3">
-
+            <a href="index.php">
             <img src="assets/logo/logoForqan.png" class="fw-bold mb-1"></img>
+            </a>
             <!--<h2 class="fw-bold mb-2 text-uppercase">Login</h2>
             <p class="text-dark-50 mb-5">Please enter your login and password!</p>--> 
 
